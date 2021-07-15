@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <Button
+            android:text="@string/new_fromtemplate_button_openfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/new_fromtemplate_button_openfile"
+            android:onClick="OnOpenFileClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/new_fromtemplate_tempname"
+            android:layout_marginTop="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.0"/>
+    <Button
+            android:text="@string/new_fromtemplate_button_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/new_fromtemplate_button_apply"
+            android:onClick="ApplyTemplate"
+            app:layout_constraintStart_toEndOf="@+id/new_fromtemplate_button_openfile"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/new_fromtemplate_button_openfile"
+            app:layout_constraintTop_toTopOf="@+id/new_fromtemplate_button_openfile" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:text="@string/new_fromtemplate_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/new_fromtemplate_text1"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:text="@string/new_fromtemplate_tempname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/new_fromtemplate_tempname"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/new_fromtemplate_text1" android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/new_fromtemplate_workarea"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/new_fromtemplate_button_openfile"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="invisible"
+            android:layout_marginTop="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0" app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+                android:text="templateInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/new_fromtemplate_tempInfo"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+
+        <Button
+                android:text="@string/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"
+                android:onClick="AddParameter"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintHorizontal_bias="0.0" android:layout_marginStart="8dp"/>
+
+        <ListView android:id="@+id/new_fromtemplate_parlist"
+                  android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                  app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                  app:layout_constraintBottom_toTopOf="@+id/button8" android:layout_marginBottom="8dp"
+                  android:orientation="vertical" app:layout_constraintTop_toBottomOf="@+id/textView5"
+                  android:layout_marginTop="8dp">
+
+        </ListView>
+
+        <Button
+                android:text="@string/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/new_fromtemplate_save"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toEndOf="@+id/button8"
+                app:layout_constraintHorizontal_bias="1.0"
+                android:onClick="AddNewExperiment" android:layout_marginStart="8dp"/>
+        <TextView
+                android:text="Параметры:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView5"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_fromtemplate_linear" android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/new_fromtemplate_tempInfo"
+                android:gravity="center_horizontal"
+                android:id="@+id/new_fromtemplate_linear">
+
+            <Button
+                    android:text="Осн."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/new_fromtemplate_img_main"
+            android:onClick="createfrom_showImageMain"/>
+
+            <Button
+                    android:text="Геом."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/new_fromtemplate_img_geom"
+                    android:onClick="createfrom_showImageGeom"/>
+
+            <Button
+                    android:text="Рег."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/new_fromtemplate_img_reg"
+                    android:onClick="createfrom_showImageReg"/>
+
+            <Button
+                    android:text="Тепл."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/new_fromtemplate_img_tepl"
+                    android:onClick="createfrom_showImageTepl"/>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

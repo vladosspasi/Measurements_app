@@ -1,0 +1,111 @@
+<resources>
+    <!--Русская локализация-->
+    <string name="app_name">Измерения v.0.2</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="ok">OK</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete">Удалить</string>
+    <string name="add">Добавить</string>
+    <string name="edit">Изменить</string>
+    <string name="choosefile">Выбрать файл</string>
+    <string name="change">Заменить</string>
+
+    <!--Параметры эксперимента-->
+    <string name="templateName">Название шаблона:</string>
+    <string name="area">Область:</string>
+    <string name="subarea">Подобласть:</string>
+    <string name="phProcess">Физический процесс:</string>
+    <string name="powEquipment">Установка/оборудование:</string>
+    <string name="images">Изображения</string>
+    <string name="mainImage">Основное:</string>
+    <string name="geomImage">Геометрическое:</string>
+    <string name="regImage">Регулярное:</string>
+    <string name="teplImage">Тепловое:</string>
+    <string name="parType">Тип параметров:</string>
+    <string name="parameter">Параметр:</string>
+    <string name="parName">Имя:</string>
+    <string name="parShortName">Короткое имя:</string>
+    <string name="parUnit">Единица измерения:</string>
+    <string name="dataType">Тип данных:</string>
+
+
+    <!--Экран меню-->
+    <string name="menu_title">Измерения</string>
+    <string name="menu_version">Версия 0.2</string>
+    <string name="menu_button_create">Новое измерение</string>
+    <string name="menu_button_list">Все измерения</string>
+    <string name="menu_button_impexp">Импорт/экспорт</string>
+    <string name="menu_button_settings">Настройки</string>
+    <string name="menu_author">Алябьев В.О., ВМСС МЭИ, 2021</string>
+
+    <!--Экран создания нового измерения-->
+    <string name="new_text">Выберите подходящий вариант:</string>>
+    <string name="new_button1">Создать новый шаблон</string>
+    <string name="new_button2">Заполнить существующий шаблон</string>
+    <string name="new_text1">Создайте новую таблицу эксперимента и заполните её. Этот вариант подходит, если эксперимент проводится впервые.</string>
+    <string name="new_text2">Возьмите уже существующую таблицу эксперимента и заполните её. Этот вариант подходит, если подобный эксперимент уже проводился, и шаблон для него уже создан.</string>
+
+    <!--Экран создания нового шаблона-->
+    <string name="new_template_message">Заполните поля, добавьте параметы, которые необходимо измерить и сохраните шаблон. Поля с "*" опциональные.</string>
+    <string name="new_template_info">Информация об эксперименте</string>
+    <string name="new_template_params">Параметры</string>
+
+    <string name="new_template_templateName">Название шаблона:</string>
+    <string name="new_template_area">Область:</string>
+    <string name="new_template_parentsubarea">Родительская подобласть: *</string>
+    <string name="new_template_subarea">Подобласть:</string>
+    <string name="new_template_phProcess">Физический процесс:</string>
+    <string name="new_template_powEquipment">Установка/оборудование:</string>
+    <string name="new_template_images">Изображения</string>
+    <string name="new_template_mainImage">Основное изобр.: *</string>
+    <string name="new_template_geomImage">Геометрическое изобр.: *</string>
+    <string name="new_template_regImage">Регулярное изобр.: *</string>
+    <string name="new_template_teplImage">Тепловое изобр.: *</string>
+    <string name="new_template_parType">Тип параметров:</string>
+
+    <string name="new_template_parameter">Параметр:</string>
+    <string name="new_template_parName">Имя:</string>
+    <string name="new_template_parShortName">Короткое имя:</string>
+    <string name="new_template_parUnit">Единица измерения:</string>
+    <string name="new_template_dataType">Тип данных:</string>
+
+    <string-array name="types">
+        <item>Численный</item>
+        <item>Строковый</item>
+        <item>Диапазон</item>
+        <item>Изображение</item>
+    </string-array>
+
+    <string name="new_template_dialog_message_enterparam">Заполните поля:</string>
+
+    <string name="new_template_addparam">Добавить</string>
+    <string name="new_template_save">Сохранить</string>
+
+    <string name="new_template_dialog_title">Готово!</string>
+    <string name="new_template_dialog_message">Шаблон сохранен под именем </string>
+
+    <string name="new_template_alert1">Необходимо заполнить все поля!</string>
+    <string name="new_template_alert2">Вы уверены, что хотите выйти? Введенные данные будут утеряны, если вы не сохраните шаблон.</string>
+
+    <!--Экран выбора шаблона и заполнения измерений-->
+    <string name="new_fromtemplate_text1">Выберите существующий шаблон эксперимента:</string>
+    <string name="new_fromtemplate_tempname">Шаблон не выбран</string>
+
+
+
+
+    <string name="new_fromtemplate_button_openfile">Выбрать файл</string>
+    <string name="new_fromtemplate_button_apply">Применить</string>
+
+
+
+    <!--Импорт-экспорт-->
+    <string name="expimp_text">"Импорт/экспорт"</string>
+    <string name="expimp_exportbutton">Экспорт данных</string>
+    <string name="expimp_importbutton">Импорт данных</string>
+    <string name="expimp_exportinfo">Выгрузка содержимого базы данных в JSON-файл.</string>
+    <string name="expimp_importinfo">Загрузка данных из JSON-файла в базу данных.</string>
+
+</resources>

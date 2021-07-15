@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/experiment_title"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp" android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/experiment_info"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/experiment_title"
+            android:layout_marginTop="8dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/experiment_info"
+            android:gravity="center_horizontal"
+            android:id="@+id/new_fromtemplate_linear">
+
+        <Button
+                android:text="Осн."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/exp_img_main"
+                android:onClick="exp_showImageMain"/>
+
+        <Button
+                android:text="Геом."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/exp_img_geom"
+                android:onClick="exp_showImageGeom"/>
+
+        <Button
+                android:text="Рег."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/exp_img_reg"
+                android:onClick="exp_showImageReg"/>
+
+        <Button
+                android:text="Тепл."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/exp_img_tepl"
+                android:onClick="exp_showImageTepl"/>
+
+    </LinearLayout>
+
+
+    <Button
+            android:text="@string/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/experiment_delete_button"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginBottom="8dp"
+            android:onClick="DeleteExperimentFromDB" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="1.0"/>
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/experiment_parameters"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/experiment_delete_button"
+            android:layout_marginBottom="8dp" app:layout_constraintTop_toBottomOf="@+id/experiment_text"
+            android:layout_marginTop="8dp">
+    </ListView>
+    <TextView
+            android:text="Параметры:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/experiment_text"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/new_fromtemplate_linear" android:layout_marginTop="8dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

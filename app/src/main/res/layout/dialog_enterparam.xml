@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/dialog_nameInput"
+            android:textSize="14sp"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_textName"
+            app:layout_constraintTop_toTopOf="@+id/dialog_textName" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/dialog_textName"
+            android:layout_marginStart="8dp"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/dialog_shortnameInput"
+            android:textSize="14sp"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_textShortName"
+            app:layout_constraintTop_toTopOf="@+id/dialog_textShortName"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/dialog_textShortName"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/dialog_unitInput"
+            android:textSize="14sp"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_textUnit"
+            app:layout_constraintTop_toTopOf="@+id/dialog_textUnit"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/dialog_textUnit"
+            android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="@string/new_template_parName"
+            android:id="@+id/dialog_textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_textMessage" android:layout_marginTop="8dp"/>
+    <TextView
+            android:text="@string/new_template_parShortName"
+            android:id="@+id/dialog_textShortName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_textName"
+            android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="@+id/dialog_textName"/>
+    <TextView
+            android:text="@string/new_template_parType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/dialog_textType"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_textShortName"
+            android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="@+id/dialog_textName"/>
+    <TextView
+            android:text="@string/new_template_parUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/dialog_textUnit"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_textType"
+            android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="@+id/dialog_textName"/>
+    <TextView
+            android:text="@string/new_template_dialog_message_enterparam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/dialog_textMessage"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"/>
+    <Spinner
+            android:id="@+id/dialog_typespinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/dialog_textType"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_textType" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:entries="@array/types" app:layout_constraintStart_toEndOf="@+id/dialog_textType"
+            android:layout_marginStart="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
